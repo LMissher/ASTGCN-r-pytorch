@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import pandas as pd
 import torch
 import torch.utils.data
 from sklearn.metrics import mean_absolute_error
@@ -45,7 +46,7 @@ def get_adjacency_matrix(distance_df_filename, num_of_vertices, id_filename=None
 
     A[:, :] = mat[:,:]
 
-    return A
+    return A, A
     # if 'npy' in distance_df_filename:
 
     #     adj_mx = np.load(distance_df_filename)
