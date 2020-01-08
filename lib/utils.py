@@ -364,7 +364,8 @@ def predict_and_save_results_mstgcn(net, data_loader, data_target_tensor, global
         excel_list = []
         prediction_length = prediction.shape[2]
 
-        for i in range(prediction_length):
+        # for i in range(prediction_length):
+        for i in range(1):
             assert data_target_tensor.shape[0] == prediction.shape[0]
             print('current epoch: %s, predict %s points' % (global_step, i))
             mae = mean_absolute_error(data_target_tensor[:, :, i], prediction[:, :, i])
