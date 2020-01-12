@@ -162,8 +162,8 @@ def read_and_generate_dataset(graph_signal_matrix_filename,
         all_samples.append(
             sample)  # sampe：[(week_sample),(day_sample),(hour_sample),target,time_sample] = [(1,N,F,Tw),(1,N,F,Td),(1,N,F,Th),(1,N,Tpre),(1,1)]
 
-    split_line1 = int(len(all_samples) * 0.6)
-    split_line2 = int(len(all_samples) * 0.8)
+    split_line1 = int(len(all_samples) * 0.8)
+    split_line2 = int(len(all_samples) * 0.9)
 
     training_set = [np.concatenate(i, axis=0)
                     for i in zip(*all_samples[:split_line1])]  # [(B,N,F,Tw),(B,N,F,Td),(B,N,F,Th),(B,N,Tpre),(B,1)]

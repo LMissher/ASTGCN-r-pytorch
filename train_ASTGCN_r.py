@@ -41,7 +41,7 @@ model_name = training_config['model_name']
 # ctx = training_config['ctx']
 # os.environ["CUDA_VISIBLE_DEVICES"] = ctx
 # USE_CUDA = torch.cuda.is_available()
-DEVICE = torch.device('cuda:7')
+DEVICE = torch.device('cuda:6')
 # print("CUDA:", USE_CUDA, DEVICE)
 
 learning_rate = float(training_config['learning_rate'])
